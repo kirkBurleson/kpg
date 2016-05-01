@@ -7,26 +7,26 @@ var DEFAULT_SIZE = 10,
 	SPECIAL = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '[', ']', '{', '}', '.', '?', '<', '>'],
 	ALL = LOWER.concat(UPPER, NUMBERS, SPECIAL);
 
-Array.prototype.shuffle = function() {
+function shuffle(arr) {
 	var i, lng, pos, tmp, floor, rand;
 
-	lng = this.length;
+	lng = arr.length;
 	floor = Math.floor;
 	rand = Math.random;
 
 	// Fisher-Yates algorithm : Durstenfeld's version
 	for (i = 0; i < lng; i++, lng--) {
 		pos = floor(rand() * (lng - 1));
-		tmp = this[pos];
-		this[pos] = this[lng - 1];
-		this[lng-1] = tmp;
+		tmp = arr[pos];
+		arr[pos] = arr[lng - 1];
+		arr[lng-1] = tmp;
 	}
 
-	return this;
+	return arr;
 }
 
-Array.prototype.pick = function() {
-	return this[Math.floor(Math.random() * (this.length-1))];
+function pick(arr) {
+	return arr[Math.floor(Math.random() * (arr.length-1))];
 }
 
 function kpg(config) {
@@ -65,42 +65,42 @@ function kpg(config) {
 
 	// lower case
 	for (i = 0; i < config.l; i++) {
-		LOWER.shuffle();
-		pw.unshift(LOWER.pick());
+		shuffle(LOWER);
+		pw.unshift(pick(LOWER));
 	}
 	config.sz -= config.l;
 
 	// upper case
 	for (i = 0; i < config.u; i++) {
-		UPPER.shuffle();
-		pw.unshift(UPPER.pick());
+		shuffle(UPPER);
+		pw.unshift(pick(UPPER));
 	}
 	config.sz -= config.u;
 
 	// numbers
 	for (i = 0; i < config.n; i++) {
-		NUMBERS.shuffle();
-		pw.unshift(NUMBERS.pick());
+		shuffle(NUMBERS);
+		pw.unshift(pick(NUMBERS));
 	}
 	config.sz -= config.n;
 
 	// special characters
 	for (i = 0; i < config.s; i++) {
-		SPECIAL.shuffle();
-		pw.unshift(SPECIAL.pick());
+		shuffle(SPECIAL);
+		pw.unshift(pick(SPECIAL));
 	}
 	config.sz -= config.s;
 
 	// the rest
 	if (config.sz > 0) {
 		for (i = config.sz; i > 0; i--) {
-			ALL.shuffle();
-			pw.unshift(ALL.pick());
+			shuffle(ALL);
+			pw.unshift(pick(ALL));
 		}
 	}
 
 
-	return pw.shuffle().join('');
+	return shuffle(pw).join('');
 }
 
 module.exports = kpg;
