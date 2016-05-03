@@ -20,12 +20,7 @@ Now you can start generating passwords. If you don't pass a config object, kpg g
 // sample: 7t0@{NbJvC<br/>
 var pw = kpg();
 
-That was simple! Now let's play with the config object: Let's create a 100 character default password: Just pass in an object literal with a 'sz' property set to the number of characters you want in the password. Min=8, Max=300. It will default to 10 if you go outside these bounds.
-
-// sample: MHp0dW}n2b@KWaKdUI$<rC5uK6U>gPj+&IpgP{#yCsp+JxuTQ^S^#UXuwx%^EME>+Z1_<K?}.NH+w&sjLM{5!B%jDBD6VQww?MR9<br/>
-var pw = kpg( {sz:100} );
-
-Let's make a 12 character password that's all lower case: Add the 'l' property for lower.<br/>
+That was simple! Now let's play with the config object. Let's make a 12 character password that's all lower case: Add the 'l' property for lower.<br/>
 
 // sample: kjzfzenmiild<br/>
 var pw = kpg( {sz:12, l:12} );
