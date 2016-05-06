@@ -57,12 +57,12 @@ If you're wondering about a maximum length, I've tested with a size of 10 millio
 CHANGES:
 ========
 
-V.3:
-Minimum size changed from 8 to 1
-Maximum size removed
-Significantly faster at sizes of 100k+
+V.3:<br/>
+Minimum size changed from 8 to 1<br/>
+Maximum size removed<br/>
+Significantly faster at sizes of 100k+<br/>
 Supports size passed as a string. // kpg("20"), instead of kpg(20);
 
-V.2:
-Introduced passing a config object in javascript
-Introduced minimums for numbers, special chars, lower case, and upper case chars
+V.2:<br/>
+Introduced passing a config object in javascript<br/>
+Introduced minimums for numbers, special chars, lower case, and upper case chars<br/>
