@@ -52,7 +52,7 @@ var pw = kpg( {sz:50, n:49, u:1} );
 
 That's all there is to it! The properties can be in any order and if the number of the properties exceeds the 'sz' property, the size will grow to their sum. If you give 'sz:12' and 'n:11' and 'l:10', you will get a password with 21 characters.
 
-If you're wondering about a maximum length, I've tested with a size of 10 million and it scaled at 1 second per million on an i7 3930k running Windows 8.0 and 16gb of ram, using nodeJS. Linux Mint 17.2, running in a virtualbox, took maybe a second more.
+If you're wondering about a maximum length, I've tested with a size of 10 million and it scaled at 1 second per million on an i7 3930k running Windows 8.0 and 16gb of ram, using nodeJS.
 
 CHANGES:
 ========
