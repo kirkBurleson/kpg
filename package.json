@@ -1,6 +1,6 @@
 {
   "name": "kpg",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "A password generator.",
   "main": "kpg.js",
   "scripts": {
@@ -11,8 +11,10 @@
     "url": "git+https://github.com/kirkBurleson/kpg.git"
   },
   "keywords": [
+    "generate",
     "password",
-    "generator"
+    "generator",
+    "unique"
   ],
   "author": "Kirk Burleson",
   "license": "MIT",
