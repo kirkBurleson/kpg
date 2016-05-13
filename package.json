@@ -1,7 +1,7 @@
 {
   "name": "kpg",
-  "version": "3.4.0",
-  "description": "A password generator.",
+  "version": "3.5.0",
+  "description": "A password, token, and ID generator.",
   "main": "kpg.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,9 @@
     "generate",
     "password",
     "generator",
-    "unique"
+    "unique,"
+    "token",
+    "ID"
   ],
   "author": "Kirk Burleson",
   "license": "MIT",

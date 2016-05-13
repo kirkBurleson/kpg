@@ -1,7 +1,7 @@
 # kpg
 <hr/>
 
-kpg is used for generating passwords. The passwords must be at least 1 character long, and you can enforce minimums for lower case, upper case, numbers, and special characters.
+kpg is used for generating passwords, tokens, and ID's. They must be at least 1 character long or the length will be the default of 10, and you can enforce minimums for lower case, upper case, numbers, and special characters.
 
 INSTALLATION
 ============
@@ -14,6 +14,7 @@ USAGE
 var kpg = require('kpg');
 ```
 
+The following applies to ID, token, and password generation.<br/>
 Now you can start generating passwords. If you don't pass a config object, kpg generates a 10 character password using lower case, upper case, numbers, and special characters:
 ```javascript
 // sample: 7t0@{NbJvC
